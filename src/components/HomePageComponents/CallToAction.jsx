@@ -60,32 +60,18 @@ const CallToAction = () => {
               585 Franklin Gateway, Marietta, GA 30067
             </p>
           </div>
-          <div className="my-16">
-            <h1
-              style={{ fontFamily: "'Jelytta', sans-serif" }}
-              className="text-6xl font-bold text-center text-gray-100">
-              Brunch:
-            </h1>
-            <p className="text-xl text-center text-gray-100 my-8">
-              Saturday & Sunday: 11:00 AM - 2:30 PM
-              <br />
-              <span className="text-xs">
-                Our kitchen closes at 3:00 PM for transition to dinner
-              </span>
-            </p>
-          </div>
           <div className="my-5">
             <h1
               style={{ fontFamily: "'Jelytta', sans-serif" }}
               className="text-6xl font-bold text-center text-gray-100">
-              Dinner:
+              Opening Hours:
             </h1>
             <p className="text-xl text-center text-gray-100 my-8">
-              Monday - Thursday 4:00 PM- 10:00 PM
+              Mon - Fri: 8am - 8pm
               <br />
-              Friday & Saturday 4:00 PM - 11:00 PM
+              Saturday: 9am - 7pm
               <br />
-              Sunday 4:00 PM - 9:00 PM
+              Sunday: 9am - 8pm
             </p>
           </div>
           </div>

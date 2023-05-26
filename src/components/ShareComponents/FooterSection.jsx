@@ -12,7 +12,7 @@ const FooterSection = () => {
 
   return (
     <section
-      className="py-20"
+      className="py-10"
       style={{
         backgroundImage: `url(${bgPattern})`,
         width: "100%",
@@ -34,15 +34,6 @@ const FooterSection = () => {
               <a className="link link-hover link-primary">Private Dining</a>
               <a className="link link-hover link-primary">Careers</a>
               <a className="link link-hover link-primary">View Menu</a>
-            </div>
-
-            <div>
-              <span className="footer-title text-gray-100 text-2xl opacity-100">
-                Legal
-              </span>
-              <a className="link link-hover link-primary">Terms of use</a>
-              <a className="link link-hover link-primary">Privacy policy</a>
-              <a className="link link-hover link-primary">Cookie policy</a>
             </div>
             <div>
               <span className="footer-title text-gray-100 text-2xl opacity-100">
@@ -94,7 +85,7 @@ const FooterSection = () => {
                 <div className="relative">
                   <input
                     type="text"
-                    placeholder="username@site.com"
+                    placeholder="Enter your email here"
                     className="input bg-[#253333] input-bordered w-full pr-16"
                   />
                   <button className="btn hover:animate-pulse btn-primary absolute top-0 right-0 rounded-l-none">
@@ -109,7 +100,7 @@ const FooterSection = () => {
 
       <div className="text-gray-100 container mx-auto pt-5 pb-1">
         <h6 className="text-center">
-          Copyright &copy; {new Date().getFullYear()} - Develop by{" "}
+          Copyright &copy; {new Date().getFullYear()} - Developed by{" "}
           <a
             className="text-yellow-200"
             href="https://www.magpollo.com/"
