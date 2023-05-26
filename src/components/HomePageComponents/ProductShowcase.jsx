@@ -42,7 +42,7 @@ const ProductShowcase = () => {
       </Reveal>
 
       <Reveal effect="fadeInUp">
-      <button className="lg:my-22 hover:animate-pop my-16 font-bold border-none btn btn-outline mx-auto flex bg-white text-black-100 btn-md lg:btn-md btn-wide w-1/4">
+      <button className="lg:my-22 hover:animate-slide font-bold my-16 border-none btn btn-outline mx-auto flex bg-primary text-black-100 btn-md lg:btn-md btn-wide w-1/4">
         Make Reservation
         </button>
       </Reveal>
