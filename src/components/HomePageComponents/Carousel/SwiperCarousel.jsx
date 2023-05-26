@@ -11,7 +11,8 @@ import "swiper/css/pagination";
 
 const SwiperCarousel = () => {
   return (
-    <section className="py-20 container mx-auto">
+    <section className="py-60 container mx-auto pt-60"> 
+    
       <Swiper
         slidesPerView={1.3}
         spaceBetween={30}
