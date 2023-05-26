@@ -88,7 +88,7 @@ const FooterSection = () => {
               <div className="form-control w-80">
                 <label className="label">
                   <span className="label-text text-gray-100">
-                    Stay in the know for all news Nooshé Jān related!
+                    Stay in the know for all news ASF related!
                   </span>
                 </label>
                 <div className="relative">
@@ -109,31 +109,16 @@ const FooterSection = () => {
 
       <div className="text-gray-100 container mx-auto pt-5 pb-1">
         <h6 className="text-center">
-          Copyright &copy; 2023 - {new Date().getFullYear()} - Develop by{" "}
+          Copyright &copy; {new Date().getFullYear()} - Develop by{" "}
           <a
             className="text-yellow-200"
-            href="https://programming-dude.com/founder/"
+            href="https://www.magpollo.com/"
             target="_blank"
             rel="noopener noreferrer">
-            Programming-Dude
+            Magpollo
           </a>
         </h6>
       </div>
-      {/* Back to Top */}
-      {showBackToTop > 150 && (
-        <button
-          style={{ zIndex: "999" }}
-          className="bg-red-600 inline fixed p-3 rounded-[50px] bottom-2 right-2">
-          <a href="#backToTop">
-            <img
-              style={{ zIndex: "999" }}
-              src="https://em-content.zobj.net/source/skype/289/rocket_1f680.png"
-              alt=""
-              className="w-12 h-12 rounded"
-            />
-          </a>
-        </button>
-      )}
     </section>
   );
 };

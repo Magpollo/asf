@@ -1,5 +1,6 @@
 import React from "react";
-import {Fade, Slide, Reveal, Rotate, Flip} from "react-reveal"
+import { Reveal } from "react-reveal"
+import { Link } from "react-router-dom";
 import bgPattern from "../../assets/cream.png";
 const ProductShowcase = () => {
   return (
@@ -18,25 +19,30 @@ const ProductShowcase = () => {
       </h2>
         </Reveal>
         <Reveal effect="fadeInUp">
-      <h1 className="lg:text-5xl text-3xl p-2 max-w-4xl mx-auto text-center text-black-100">
-      Our dishes, rooted in tradition, bring the soulful warmth of African cuisine to your plate.
+        <h1 
+        style={{ fontFamily: "'Zilla Slab', sans-serif" }}
+        className="lg:text-5xl text-2xl font-bold p-2 max-w-3xl mx-auto text-center text-black-100">
+        Our dishes, rooted in tradition, bring the soulful warmth of African cuisine to your plate.
       </h1>
       </Reveal>
       <Reveal effect="fadeInUp">
 
       <p className="lg:text-2xl p-2 text-xl text-black-100 max-w-xl mx-auto text-center my-10">
       Translating to "heart, captured" in Farsi, African Soul Food is a love letter to the influential dishes that shaped 
-      Fares Kargar's youth and the women in his life who instilled his deep appreciation for African cooking.  View Menu
+      Fares Kargar's youth and the women in his life who instilled his deep appreciation for African cooking.  
+      <Link className="text-red-500 border-b-2 border-red-500" to={"/"}>
+          View Menu
+        </Link>
       </p>
       </Reveal>
       <Reveal effect="fadeInUp">
-      <button className="lg:my-22 hover:animate-slide my-16 border-none btn btn-outline mx-auto flex bg-primary text-black-100 btn-md lg:btn-lg btn-wide">
+      <button className="lg:my-22 hover:animate-slide font-bold my-16 border-none btn btn-outline mx-auto flex bg-primary text-black-100 btn-md lg:btn-md btn-wide w-1/4">
         ORDER ONLINE
         </button>
       </Reveal>
 
       <Reveal effect="fadeInUp">
-      <button className="lg:my-22 hover:animate-pop my-16 border-none btn btn-outline mx-auto flex bg-white text-black-100 btn-md lg:btn-lg btn-wide">
+      <button className="lg:my-22 hover:animate-pop my-16 font-bold border-none btn btn-outline mx-auto flex bg-white text-black-100 btn-md lg:btn-md btn-wide w-1/4">
         Make Reservation
         </button>
       </Reveal>

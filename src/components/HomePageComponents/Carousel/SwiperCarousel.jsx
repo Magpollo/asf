@@ -1,5 +1,6 @@
 import React from "react";
 // Import Swiper React components
+import { Reveal } from "react-reveal"
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper";
 import bgPattern from "../../../assets/Pattern.png";
@@ -11,8 +12,27 @@ import "swiper/css/pagination";
 
 const SwiperCarousel = () => {
   return (
-    <section className="py-60 container mx-auto pt-60"> 
-    
+    <section className="py-20 container mx-auto pt-40">
+      <Reveal effect="fadeInUp">
+        <h1
+          style={{ fontFamily: "'Zilla Slab', sans-serif" }}
+          className="lg:text-6xl text-6xl font-bold text-center my-10 text-white max-w-3xl mx-auto">
+          Celebrate the flavors of Africa with every bite
+        </h1>
+      </Reveal>
+      <div className="flex justify-center space-x-5">
+  <Reveal effect="fadeInUp">
+    <button className="lg:my-22 hover:animate-slide font-bold my-8 border-none btn btn-outline bg-primary text-black-100 btn-md lg:btn-md btn-wide">
+      ORDER ONLINE
+    </button>
+  </Reveal>
+  <Reveal effect="fadeInUp">
+    <button className="lg:my-22 hover:animate-slide font-bold my-8 border-none btn btn-outline bg-primary text-black-100 btn-md lg:btn-md btn-wide">
+      Make Reservation
+    </button>
+  </Reveal>
+</div>
+
       <Swiper
         slidesPerView={1.3}
         spaceBetween={30}
