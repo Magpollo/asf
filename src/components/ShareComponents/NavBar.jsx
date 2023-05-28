@@ -6,11 +6,13 @@ const NavBar = () => {
   const [isClicked, setClicked] = useState(false);
 
   const commonLi = (
-    <> 
+    <>
       <li className="lg:py-0 py-3">
         <NavLink
           className={({ isActive }) =>
-            isActive ? "text-red-500 font-bold" : undefined
+            `${
+              isActive ? "text-red-500" : "text-gray-100"
+            } hover:text-yellow-300 transition-all duration-500 ease-in-out font-bold`
           }
           to={"/"}>
           Home
@@ -19,7 +21,9 @@ const NavBar = () => {
       <li className="lg:py-0 py-3">
         <NavLink
           className={({ isActive }) =>
-            isActive ? "text-red-500 font-bold" : undefined
+            `${
+              isActive ? "text-red-500" : "text-gray-100"
+            } hover:text-yellow-300 transition-all duration-500 ease-in-out font-bold`
           }
           to={"/catering"}>
           Catering
@@ -28,7 +32,9 @@ const NavBar = () => {
       <li className="lg:py-0 py-3">
         <NavLink
           className={({ isActive }) =>
-            isActive ? "text-red-500 font-bold" : undefined
+            `${
+              isActive ? "text-red-500" : "text-gray-100"
+            } hover:text-yellow-300 transition-all duration-500 ease-in-out font-bold`
           }
           to="/private-dining">
           Private Dining
@@ -37,7 +43,9 @@ const NavBar = () => {
       <li className="lg:py-0 py-3">
         <NavLink
           className={({ isActive }) =>
-            isActive ? "text-red-500 font-bold" : undefined
+            `${
+              isActive ? "text-red-500" : "text-gray-100"
+            } hover:text-yellow-300 transition-all duration-500 ease-in-out font-bold`
           }
           to="/careers">
           Careers
@@ -46,7 +54,9 @@ const NavBar = () => {
       <li className="lg:py-0 py-3">
         <NavLink
           className={({ isActive }) =>
-            isActive ? "text-red-500 font-bold" : undefined
+            `${
+              isActive ? "text-red-500" : "text-gray-100"
+            } hover:text-yellow-300 transition-all duration-500 ease-in-out font-bold`
           }
           to="/about">
           About
@@ -55,7 +65,9 @@ const NavBar = () => {
       <li className="lg:py-0 py-3">
       <NavLink
           className={({ isActive }) =>
-            isActive ? "text-red-500 font-bold" : undefined
+            `${
+              isActive ? "text-red-500" : "text-gray-100"
+            } hover:text-yellow-300 transition-all duration-500 ease-in-out font-bold`
           }
           to="/about">
           View Menu
@@ -114,14 +126,14 @@ const NavBar = () => {
             <ul
               style={{
                 backgroundImage: `url(${greenBg})`,
-                width: "100vw",
-                marginTop: "-88px",
                 height:"100vh",
                 zIndex: "-1",
                 padding:"20vh",
                 fontSize: "2em",
                 lineHeight: "7vh",
-                fontFamily: "'Zilla Slab', sans-serif" 
+                fontFamily: "'Zilla Slab', sans-serif",
+                margin:"auto",
+                marginTop: "-88px",
               }}
               tabIndex={0}
               className={`${
