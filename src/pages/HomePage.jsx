@@ -14,12 +14,10 @@ const HomePage = () => {
       <main
         style={{
           backgroundImage: `url(${bgPattern})`,
-          width: '100%',
-          zIndex: '-1',
-          marginTop: '-88px',
-        }}
-        className="w-full"
-      >
+          width: "100%",
+          zIndex: "-1",
+          marginTop: "-10vh",
+        }}>
         <section className=" ">
           <Bounce
             bottom
@@ -29,7 +27,7 @@ const HomePage = () => {
             <SwiperCarousel />
           </Bounce>
           <ProductShowcase />
-          {/* <MakeReservation /> */}
+{/*           <MakeReservation />  */}
           <CallToAction />
         </section>
       </main>

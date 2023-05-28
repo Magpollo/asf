@@ -1,13 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/ASF_logo.png";
-
+import greenBg from "../../assets/green.png";
 const NavBar = () => {
   const [isClicked, setClicked] = useState(false);
 
   const commonLi = (
-    <>
-      <li>
+    <> 
+      <li className="lg:py-0 py-3">
         <NavLink
           className={({ isActive }) =>
             isActive ? "text-red-500 font-bold" : undefined
@@ -16,8 +16,7 @@ const NavBar = () => {
           Home
         </NavLink>
       </li>
-
-      <li>
+      <li className="lg:py-0 py-3">
         <NavLink
           className={({ isActive }) =>
             isActive ? "text-red-500 font-bold" : undefined
@@ -26,7 +25,7 @@ const NavBar = () => {
           Catering
         </NavLink>
       </li>
-      <li>
+      <li className="lg:py-0 py-3">
         <NavLink
           className={({ isActive }) =>
             isActive ? "text-red-500 font-bold" : undefined
@@ -35,7 +34,7 @@ const NavBar = () => {
           Private Dining
         </NavLink>
       </li>
-      <li>
+      <li className="lg:py-0 py-3">
         <NavLink
           className={({ isActive }) =>
             isActive ? "text-red-500 font-bold" : undefined
@@ -44,7 +43,7 @@ const NavBar = () => {
           Careers
         </NavLink>
       </li>
-      <li>
+      <li className="lg:py-0 py-3">
         <NavLink
           className={({ isActive }) =>
             isActive ? "text-red-500 font-bold" : undefined
@@ -53,28 +52,30 @@ const NavBar = () => {
           About
         </NavLink>
       </li>
-      <li>
-        <button className="btn hover:animate-bounce btn-primary active:text-gray-100">
+      <li className="lg:py-0 py-3">
+      <NavLink
+          className={({ isActive }) =>
+            isActive ? "text-red-500 font-bold" : undefined
+          }
+          to="/about">
           View Menu
-        </button>
+        </NavLink>
       </li>
     </>
   );
   return (
     <>
-      
-    <section className="container mx-auto">
-      <nav className="flex justify-between  py-5" id="backToTop">
-         <div className="">
-          <Link to="/">
-            <img src={logo} alt="" className="h-10" />
-          </Link>
-        </div>
-        {/* Mobile menu here start*/}
-        <div className="lg:hidden block relative">
-          <div
+      <section className="container relative mx-auto w-full">
+        <nav className="flex justify-between items-center py-5 " id="backToTop">
+          <div style={{zIndex: "6"}} >
+            <Link to="/">
+              <img src={logo} className="h-10 " />
+            </Link>
+          </div>
+          {/* Mobile menu here start*/}
+          <div style={{ zIndex: "4" }}
             // style={{ display: "block", width: "100%" }}
-            className="absolute right-0">
+            className=" lg:hidden block">
             {/* Hamburger Icon */}
             <label
               onClick={() => setClicked(!isClicked)}
@@ -111,28 +112,39 @@ const NavBar = () => {
               )}
             </label>
             <ul
+              style={{
+                backgroundImage: `url(${greenBg})`,
+                width: "100vw",
+                marginTop: "-88px",
+                height:"100vh",
+                zIndex: "-1",
+                padding:"20vh",
+                fontSize: "2em",
+                lineHeight: "7vh",
+                fontFamily: "'Zilla Slab', sans-serif" 
+              }}
               tabIndex={0}
               className={`${
-                !isClicked ? "hidden " : undefined
-              } absolute bg-base-100 mt-3 p-2 right-8 rounded-box shadow w-[90%] z-[1]`}>
+                !isClicked ? "hidden " : "text-gray-100"
+              } absolute top-[100%] left-0 w-full m-0 p-0 list-none bg-transparent border-none text-xl z-50 shadow text-center`}>
               {/* this menu for mobile */}
               {commonLi}
             </ul>
           </div>
-          
-        </div>
-        {/* Mobile menu here End*/}
-        
-       {/* Desktop menu here start*/}
-        <div className="hidden lg:block">
-          <ul className="menu menu-horizontal px-1 text-secondary">
-            {commonLi}
-          </ul>
-        </div>
-       {/* Desktop menu here End*/}
-      </nav>
+
+          {/* Mobile menu here End*/}
+
+          {/* Desktop menu here start*/}
+          <div className="hidden lg:block">
+            <ul className="flex gap-4 left-0 justify-center items-center text-xl px-0 text-secondary">
+              {commonLi}
+            </ul>
+          </div>
+
+          {/* Desktop menu here End*/}
+        </nav>
       </section>
-      </>
+    </>
   );
 };
 

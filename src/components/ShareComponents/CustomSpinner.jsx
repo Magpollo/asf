@@ -6,6 +6,7 @@ const CustomSpinner = (WrappedComponent) => {
     const [showLoader, setShowLoader] = useState(true);
 
     useEffect(() => {
+
       const timeout = setTimeout(() => {
         setShowLoader(false);
       }, 1000); // Set the desired time duration in milliseconds

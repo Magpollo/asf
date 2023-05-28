@@ -1,42 +1,40 @@
 import React from 'react';
 // Import Swiper React components
-import { Reveal } from 'react-reveal';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation, Pagination } from 'swiper';
-import bgPattern from '../../../assets/Pattern.png';
+import { Slide } from "react-reveal"
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation, Pagination } from "swiper";
 import ButtonOne from '../../ShareComponents/ButtonOne';
+import bgPattern from "../../../assets/Pattern.png";
 // Import Swiper styles
-import './SwiperCarousel.css';
-import 'swiper/css/navigation';
-import 'swiper/css';
-import 'swiper/css/pagination';
+import "./SwiperCarousel.css";
+import "swiper/css/navigation";
+import "swiper/css";
+import "swiper/css/pagination";
 
 const SwiperCarousel = () => {
   return (
     <section className="py-20 container mx-auto pt-40 grid">
-      <Reveal effect="fadeInUp">
+      <Slide bottom>
         <h1
           style={{ fontFamily: "'Zilla Slab', sans-serif" }}
           className="lg:text-6xl text-6xl font-bold text-center text-white max-w-3xl mx-auto"
         >
           Celebrate the flavors of Africa with every bite
         </h1>
-      </Reveal>
+      </Slide>
       <div className="flex md:flex-row flex-col justify-self-center py-12 w-fit">
-        <Reveal
-          effect="fadeInUp"
+        <Slide bottom
           className="w-fit"
         >
           <ButtonOne>Order Online</ButtonOne>
-        </Reveal>
-        <Reveal
-          effect="fadeInUp"
+        </Slide>
+        <Slide bottom
           className="w-fit"
         >
           <ButtonOne>Make Reservation</ButtonOne>
-        </Reveal>
+        </Slide>
       </div>
-
+      <Slide bottom>
       <Swiper
         slidesPerView={1.3}
         spaceBetween={30}
@@ -78,6 +76,7 @@ const SwiperCarousel = () => {
           />
         </SwiperSlide>
       </Swiper>
+      </Slide>
     </section>
   );
 };
