@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import loading from "../../assets/loadingscreen.png";
+import React, { useEffect, useState } from 'react';
+import loading from '../../assets/loadingscreen.png';
 
 const CustomSpinner = (WrappedComponent) => {
   return () => {
@@ -14,13 +14,13 @@ const CustomSpinner = (WrappedComponent) => {
     }, []);
 
     return (
-      <div>
+      <div className="m-0">
         {showLoader ? (
-          <div className="flex justify-center items-center">
+          <div className="h-screen absolute top-0 bottom-0 z-50 w-screen flex justify-center items-center">
             <img
               src={loading}
               alt=""
-              className="w-full h-full -mt-[88px] z-[1]"
+              className="w-full h-full z-[1]"
             />
           </div>
         ) : (
