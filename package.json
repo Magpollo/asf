@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.14",
     "daisyui": "^2.51.6",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",

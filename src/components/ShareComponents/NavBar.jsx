@@ -1,7 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { Slide } from "react-reveal"
 import logo from "../../assets/ASF_logo.png";
 import greenBg from "../../assets/green.png";
+
 const NavBar = () => {
   const [isClicked, setClicked] = useState(false);
 
@@ -9,9 +11,9 @@ const NavBar = () => {
     <>
       <li className="lg:py-0 py-3">
         <NavLink
+          onClick={() => setClicked(false)}
           className={({ isActive }) =>
-            `${
-              isActive ? "text-red-500" : "text-gray-100"
+            `${isActive ? "text-red-500" : "text-gray-100"
             } hover:text-yellow-300 transition-all duration-500 ease-in-out font-bold`
           }
           to={"/"}>
@@ -20,9 +22,9 @@ const NavBar = () => {
       </li>
       <li className="lg:py-0 py-3">
         <NavLink
+          onClick={() => setClicked(false)}
           className={({ isActive }) =>
-            `${
-              isActive ? "text-red-500" : "text-gray-100"
+            `${isActive ? "text-red-500" : "text-gray-100"
             } hover:text-yellow-300 transition-all duration-500 ease-in-out font-bold`
           }
           to={"/catering"}>
@@ -31,9 +33,9 @@ const NavBar = () => {
       </li>
       <li className="lg:py-0 py-3">
         <NavLink
+          onClick={() => setClicked(false)}
           className={({ isActive }) =>
-            `${
-              isActive ? "text-red-500" : "text-gray-100"
+            `${isActive ? "text-red-500" : "text-gray-100"
             } hover:text-yellow-300 transition-all duration-500 ease-in-out font-bold`
           }
           to="/private-dining">
@@ -42,9 +44,9 @@ const NavBar = () => {
       </li>
       <li className="lg:py-0 py-3">
         <NavLink
+          onClick={() => setClicked(false)}
           className={({ isActive }) =>
-            `${
-              isActive ? "text-red-500" : "text-gray-100"
+            `${isActive ? "text-red-500" : "text-gray-100"
             } hover:text-yellow-300 transition-all duration-500 ease-in-out font-bold`
           }
           to="/careers">
@@ -53,9 +55,9 @@ const NavBar = () => {
       </li>
       <li className="lg:py-0 py-3">
         <NavLink
+          onClick={() => setClicked(false)}
           className={({ isActive }) =>
-            `${
-              isActive ? "text-red-500" : "text-gray-100"
+            `${isActive ? "text-red-500" : "text-gray-100"
             } hover:text-yellow-300 transition-all duration-500 ease-in-out font-bold`
           }
           to="/about">
@@ -63,10 +65,10 @@ const NavBar = () => {
         </NavLink>
       </li>
       <li className="lg:py-0 py-3">
-      <NavLink
+        <NavLink
+          onClick={() => setClicked(false)}
           className={({ isActive }) =>
-            `${
-              isActive ? "text-red-500" : "text-gray-100"
+            `${isActive ? "text-red-500" : "text-gray-100"
             } hover:text-yellow-300 transition-all duration-500 ease-in-out font-bold`
           }
           to="/about">
@@ -77,9 +79,9 @@ const NavBar = () => {
   );
   return (
     <>
-      <section className="container relative mx-auto w-full">
+      <section className="relative mx-auto lg:px-24 px-4 w-full" style={{ fontFamily: "Zilla Slab" }}>
         <nav className="flex justify-between items-center py-5 " id="backToTop">
-          <div style={{zIndex: "6"}} >
+          <div style={{ zIndex: "6" }} >
             <Link to="/">
               <img src={logo} className="h-10 " />
             </Link>
@@ -99,11 +101,11 @@ const NavBar = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke="currentColor">
+                  stroke="#ff0000">
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    strokeWidth="2"
+                    strokeWidth="4"
                     d="M6 18L18 6M6 6l12 12"
                   />
                 </svg>
@@ -126,19 +128,21 @@ const NavBar = () => {
             <ul
               style={{
                 backgroundImage: `url(${greenBg})`,
-                height:"100vh",
+                height: "100vh",
                 zIndex: "-1",
-                padding:"20vh",
-                fontSize: "2em",
-                lineHeight: "7vh",
+                lineHeight: "8vh",
                 fontFamily: "'Zilla Slab', sans-serif",
-                margin:"auto",
+                margin: "auto",
                 marginTop: "-88px",
+                position: "absolute",
+                textAlign: "center",
+                transition: "opacity 0.4s ease-in-out",
+                opacity: isClicked ? 1 : 0,
+                paddingTop: "20vh"
               }}
               tabIndex={0}
-              className={`${
-                !isClicked ? "hidden " : "text-gray-100"
-              } absolute top-[100%] left-0 w-full m-0 p-0 list-none bg-transparent border-none text-xl z-50 shadow text-center`}>
+              className="absolute mx-auto left-0 h-full w-full"
+            >
               {/* this menu for mobile */}
               {commonLi}
             </ul>
