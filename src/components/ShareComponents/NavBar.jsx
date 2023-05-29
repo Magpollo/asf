@@ -87,6 +87,7 @@ const NavBar = () => {
       </li>
       <li className="lg:py-0 py-3">
         <NavLink
+          onClick={() => setClicked(false)}
           className={({ isActive }) =>
             `${
               isActive ? 'text-red-500' : 'text-gray-100'

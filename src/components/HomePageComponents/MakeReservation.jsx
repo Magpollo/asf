@@ -1,19 +1,20 @@
-import React from "react";
-import { Slide } from "react-reveal";
-import bgPattern from "../../assets/cream.png";
-import divider from "../../assets/divider.svg";
+import React from 'react';
+import { Slide } from 'react-reveal';
+import bgPattern from '../../assets/cream.png';
+import divider from '../../assets/divider.svg';
 import ButtonOne from '../ShareComponents/ButtonOne';
 
 const MakeReservation = () => {
   return (
-    <section className="lg:py-2 py-2 mx-auto lg:px-80 px:10"
+    <section
+      className="lg:py-2 py-2 mx-auto lg:px-80 px:10 text-black-100"
       style={{
         background: `url(${bgPattern})`,
-        width: "100%",
-        zIndex: "-1",
-        marginTop: "0px",
-      }}>
-
+        width: '100%',
+        zIndex: '-1',
+        marginTop: '0px',
+      }}
+    >
       <img
         src={divider}
         alt=""
@@ -22,12 +23,14 @@ const MakeReservation = () => {
 
       <h2
         style={{ fontFamily: "'Zilla Slab', sans-serif" }}
-        className="lg:text-6xl text-4xl text-center my-12 text-black-100">
+        className="lg:text-6xl text-4xl text-center my-12 text-black-100"
+      >
         Come meet Delicious
       </h2>
       <h4
         style={{ fontFamily: "'Zilla Slab', sans-serif" }}
-        className="lg:text-2xl text-2xl font-bold p-2 max-w-xl mx-auto text-center text-black-100">
+        className="lg:text-2xl text-2xl font-bold p-2 max-w-xl mx-auto text-center text-black-100"
+      >
         Our Menu Highlights
       </h4>
 
@@ -43,48 +46,52 @@ const MakeReservation = () => {
           <div className="lg:px-10 mx-auto text-center">
             <h2
               style={{ fontFamily: "'Zilla Slab', sans-serif" }}
-              className="lg:text-4xl text-4xl text-center my-5 text-black-100">
+              className="lg:text-4xl text-4xl text-center my-5 text-black-100"
+            >
               Succulent Suya
             </h2>
             <h4
               style={{ fontFamily: "'Zilla Slab', sans-serif" }}
-              className="lg:text-2xl text-2xl font-bold p-2 max-w-xl mx-auto text-center text-black-100">
+              className="lg:text-2xl text-2xl font-bold p-2 max-w-xl mx-auto text-center text-black-100"
+            >
               The African Kebob
             </h4>
             <p className="w-3/4 mx-auto">
-              Suya or tsire is a spicy meat skewer which is a popular food item in  our home of West Africa. Our Suya is made with  spicy, skewered beef.
-              It is marinated in spices (Yaji) which include peanut cake, salt, vegetable oil and other flavorings, and then barbecued.
-              Suya is served with extra helpings of dried pepper mix and sliced onions.
+              Suya or tsire is a spicy meat skewer which is a popular food item
+              in our home of West Africa. Our Suya is made with spicy, skewered
+              beef. It is marinated in spices (Yaji) which include peanut cake,
+              salt, vegetable oil and other flavorings, and then barbecued. Suya
+              is served with extra helpings of dried pepper mix and sliced
+              onions.
             </p>
-            <ButtonOne className="mx-auto">
-              Order now
-            </ButtonOne>
+            <ButtonOne className="mx-auto">Order now</ButtonOne>
           </div>
-
         </Slide>
       </div>
 
-      <div className="grid lg:grid-cols-2 grid-cols-1 items-center w-4/4 mx-auto py-4 mt-8">
+      <div className="grid lg:grid-cols-2 grid-cols-1 items-center w-4/4 mx-auto py-4 mt-8 pb-10 md:pb-0">
         <Slide bottom>
           <div className="lg:px-10 mx-auto text-center">
             <h2
               style={{ fontFamily: "'Zilla Slab', sans-serif" }}
-              className="lg:text-4xl text-4xl text-center my-5 text-black-100">
+              className="lg:text-4xl text-4xl text-center my-5 text-black-100"
+            >
               Amazing African Soups
             </h2>
             <h4
               style={{ fontFamily: "'Zilla Slab', sans-serif" }}
-              className="lg:text-2xl text-2xl font-bold p-2 max-w-xl mx-auto text-center text-black-100">
+              className="lg:text-2xl text-2xl font-bold p-2 max-w-xl mx-auto text-center text-black-100"
+            >
               Ogbono soup highlighted
             </h4>
             <p className="w-3/4 mx-auto">
-              Africa is the home of hearty, healthy soups. All made from scratch, African soups are filled with lots of green vegetables and fresh meats.
-              This month's highlighted soup is rich and savory Ogbono indigenous to Southern Nigeria.
-              This decadent delicacy made with ogbono seeds is both nutritious and satisfying.
+              Africa is the home of hearty, healthy soups. All made from
+              scratch, African soups are filled with lots of green vegetables
+              and fresh meats. This month's highlighted soup is rich and savory
+              Ogbono indigenous to Southern Nigeria. This decadent delicacy made
+              with ogbono seeds is both nutritious and satisfying.
             </p>
-            <ButtonOne className="mx-auto">
-              Order now
-            </ButtonOne>
+            <ButtonOne className="mx-auto">Order now</ButtonOne>
           </div>
         </Slide>
         <Slide bottom>
@@ -94,10 +101,7 @@ const MakeReservation = () => {
             className="rounded-md mx-auto"
           />
         </Slide>
-
       </div>
-
-
     </section>
   );
 };

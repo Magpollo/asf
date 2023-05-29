@@ -5,3 +5,12 @@ html,
 body {
   font-family: 'Zilla Slab', 'Sweet Buttermilk Free', sans-serif Im !important;
 }
+
+@media (prefers-color-scheme: light) {
+  html {
+    color-scheme: light;
+  }
+  body {
+    background: #3c5b50;
+  }
+}
