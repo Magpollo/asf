@@ -12,8 +12,6 @@ const ProductShowcase = () => {
         width: '100%',
         zIndex: '-1',
         marginTop: '0px',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-Repeat',
       }}
     >
       <Slide bottom>
@@ -52,7 +50,7 @@ const ProductShowcase = () => {
         </Slide>
 
         <Slide bottom>
-          <ButtonOne>Make Reseration</ButtonOne>
+          <ButtonOne>Make Reservation</ButtonOne>
         </Slide>
       </div>
     </section>

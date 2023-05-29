@@ -21,7 +21,7 @@ const CateringPage = () => {
         <div className="container mx-auto py-16">
           <Fade
             bottom
-            duration={3000}
+            duration={1500}
           >
             <CateringSwiperCarousel />
           </Fade>

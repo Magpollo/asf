@@ -11,23 +11,16 @@ const HomePage = () => {
   usePageTitle('Home Page');
   return (
     <>
-      <main
-        style={{
+      <main>
+        <section style={{
           backgroundImage: `url(${bgPattern})`,
           width: "100%",
           zIndex: "-1",
           marginTop: "-10vh",
-        }}>
-        <section className=" ">
-          <Bounce
-            bottom
-            cascade
-            duration={3000}
-          >
-            <SwiperCarousel />
-          </Bounce>
+        }} className="mx-auto">
+          <SwiperCarousel />
           <ProductShowcase />
-{/*           <MakeReservation />  */}
+          <MakeReservation />
           <CallToAction />
         </section>
       </main>

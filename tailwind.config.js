@@ -16,6 +16,8 @@ export default {
 
           black: "#000",
 
+          red: "#EF4444",
+
           neutral: "#1D212A",
 
           "base-100": "#ffffff",

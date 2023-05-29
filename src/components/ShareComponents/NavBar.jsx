@@ -1,14 +1,28 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { Slide } from 'react-reveal';
 import logo from '../../assets/ASF_logo.png';
 import greenBg from '../../assets/green.png';
+
 const NavBar = () => {
   const [isClicked, setClicked] = useState(false);
+
+  //when the navbar is open, the body will be fixed
+  useEffect(() => {
+    if (isClicked) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+    } else {
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+    }
+  }, [isClicked]);
 
   const commonLi = (
     <>
       <li className="lg:py-0 py-3">
         <NavLink
+          onClick={() => setClicked(false)}
           className={({ isActive }) =>
             `${
               isActive ? 'text-red-500' : 'text-gray-100'
@@ -21,6 +35,7 @@ const NavBar = () => {
       </li>
       <li className="lg:py-0 py-3">
         <NavLink
+          onClick={() => setClicked(false)}
           className={({ isActive }) =>
             `${
               isActive ? 'text-red-500' : 'text-gray-100'
@@ -33,6 +48,7 @@ const NavBar = () => {
       </li>
       <li className="lg:py-0 py-3">
         <NavLink
+          onClick={() => setClicked(false)}
           className={({ isActive }) =>
             `${
               isActive ? 'text-red-500' : 'text-gray-100'
@@ -45,6 +61,7 @@ const NavBar = () => {
       </li>
       <li className="lg:py-0 py-3">
         <NavLink
+          onClick={() => setClicked(false)}
           className={({ isActive }) =>
             `${
               isActive ? 'text-red-500' : 'text-gray-100'
@@ -84,7 +101,7 @@ const NavBar = () => {
   );
   return (
     <>
-      <section className="container relative mx-auto w-full">
+      <section className="container relative mx-auto w-full px-4 lg:px-24">
         <nav
           className="flex justify-between items-center py-5 "
           id="backToTop"
@@ -115,12 +132,12 @@ const NavBar = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke="currentColor"
+                  stroke="#ff0000"
                 >
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    strokeWidth="2"
+                    strokeWidth="4"
                     d="M6 18L18 6M6 6l12 12"
                   />
                 </svg>
@@ -144,19 +161,18 @@ const NavBar = () => {
             <ul
               style={{
                 backgroundImage: `url(${greenBg})`,
-                height: '100vh',
                 zIndex: '-1',
-                padding: '20vh',
                 fontSize: '2em',
-                lineHeight: '7vh',
+                lineHeight: '8vh',
                 fontFamily: "'Zilla Slab', sans-serif",
                 margin: 'auto',
-                marginTop: '-88px',
+                textAlign: 'center',
+                transition: 'opacity 0.4s ease-in-out',
+                opacity: isClicked ? 1 : 0,
+                paddingTop: '20vh',
               }}
               tabIndex={0}
-              className={`${
-                !isClicked ? 'hidden ' : 'text-gray-100'
-              } absolute top-[100%] left-0 w-full m-0 p-0 list-none bg-transparent border-none text-xl z-50 shadow text-center`}
+              className="mx-auto left-0 h-screen w-full fixed top-0 bottom-0 overflow-hidden overscroll-none"
             >
               {/* this menu for mobile */}
               {commonLi}

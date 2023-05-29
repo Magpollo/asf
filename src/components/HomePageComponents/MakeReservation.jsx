@@ -1,66 +1,103 @@
 import React from "react";
-import { Zoom, Fade, Flip, Bounce } from "react-reveal";
+import { Slide } from "react-reveal";
 import bgPattern from "../../assets/cream.png";
+import divider from "../../assets/divider.svg";
+import ButtonOne from '../ShareComponents/ButtonOne';
+
 const MakeReservation = () => {
   return (
-    <section style={{
-      backgroundImage: `url(${bgPattern})`,
-      width: "100%",
-      zIndex: "-1",
-      marginTop: "0px",
-    }}>
-      <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-4 gap-16 items-center">
-        <Fade bottom big cascade duration={1500}>
+    <section className="lg:py-2 py-2 mx-auto lg:px-80 px:10"
+      style={{
+        background: `url(${bgPattern})`,
+        width: "100%",
+        zIndex: "-1",
+        marginTop: "0px",
+      }}>
+
+      <img
+        src={divider}
+        alt=""
+        className="rounded-md mx-auto w-full mt-8"
+      />
+
+      <h2
+        style={{ fontFamily: "'Zilla Slab', sans-serif" }}
+        className="lg:text-6xl text-4xl text-center my-12 text-black-100">
+        Come meet Delicious
+      </h2>
+      <h4
+        style={{ fontFamily: "'Zilla Slab', sans-serif" }}
+        className="lg:text-2xl text-2xl font-bold p-2 max-w-xl mx-auto text-center text-black-100">
+        Our Menu Highlights
+      </h4>
+
+      <div className="grid lg:grid-cols-2 grid-cols-1 items-center w-4/4 mx-auto py-4 mt-12">
+        <Slide bottom>
           <img
-            src="https://images.squarespace-cdn.com/content/v1/6434de7a3f788a47f32b88e8/303d6de6-a07c-4f7a-9de3-744057968861/Atlanta-middle-eastern-cuisine.jpg?format=750w"
+            src="https://static.wixstatic.com/media/ffffbd_b4bbface093e404895562f07fc90126a~mv2.jpg/v1/fill/w_488,h_552,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/ffffbd_b4bbface093e404895562f07fc90126a~mv2.jpg"
             alt=""
-            className="rounded-md"
+            className="rounded-md mx-auto"
           />
-        </Fade>
-        <Fade bottom big cascade duration={1500}>
-          <h2
-            style={{ fontFamily: "'Jelytta', sans-serif" }}
-            className="lg:text-6xl text-3xl font-bold text-center text-gray-100">
-            A crossroad of flavors and cultures.
-          </h2>
-        </Fade>
+        </Slide>
+        <Slide bottom>
+          <div className="lg:px-10 mx-auto text-center">
+            <h2
+              style={{ fontFamily: "'Zilla Slab', sans-serif" }}
+              className="lg:text-4xl text-4xl text-center my-5 text-black-100">
+              Succulent Suya
+            </h2>
+            <h4
+              style={{ fontFamily: "'Zilla Slab', sans-serif" }}
+              className="lg:text-2xl text-2xl font-bold p-2 max-w-xl mx-auto text-center text-black-100">
+              The African Kebob
+            </h4>
+            <p className="w-3/4 mx-auto">
+              Suya or tsire is a spicy meat skewer which is a popular food item in  our home of West Africa. Our Suya is made with  spicy, skewered beef.
+              It is marinated in spices (Yaji) which include peanut cake, salt, vegetable oil and other flavorings, and then barbecued.
+              Suya is served with extra helpings of dried pepper mix and sliced onions.
+            </p>
+            <ButtonOne className="mx-auto">
+              Order now
+            </ButtonOne>
+          </div>
+
+        </Slide>
       </div>
 
-      <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-4 gap-16 items-center lg:px-1 lg:py-24 p-2 lg:my-1 my-12">
-        <Fade bottom big cascade duration={1500}>
-          <div>
-            <p className="text-xl lg:mr-9 text-gray-100">
-              Centuries of talented cooks and exceptional palettes have played a
-              role in forming what we recognize today as Middle Eastern cuisine.
-              <br />
-              <br />
-              When you enter our African Soul Food we want you to feel like you
-              have met new friends - a new family - who will guide you through
-              our region's most memorable offerings, we hope to transport you to
-              country sides of Iran, where we all sit around the table and wait
-              to be blown away by our mothers and grandmothers cooking while
-              enjoying the company of our favorite people.
+      <div className="grid lg:grid-cols-2 grid-cols-1 items-center w-4/4 mx-auto py-4 mt-8">
+        <Slide bottom>
+          <div className="lg:px-10 mx-auto text-center">
+            <h2
+              style={{ fontFamily: "'Zilla Slab', sans-serif" }}
+              className="lg:text-4xl text-4xl text-center my-5 text-black-100">
+              Amazing African Soups
+            </h2>
+            <h4
+              style={{ fontFamily: "'Zilla Slab', sans-serif" }}
+              className="lg:text-2xl text-2xl font-bold p-2 max-w-xl mx-auto text-center text-black-100">
+              Ogbono soup highlighted
+            </h4>
+            <p className="w-3/4 mx-auto">
+              Africa is the home of hearty, healthy soups. All made from scratch, African soups are filled with lots of green vegetables and fresh meats.
+              This month's highlighted soup is rich and savory Ogbono indigenous to Southern Nigeria.
+              This decadent delicacy made with ogbono seeds is both nutritious and satisfying.
             </p>
-            <button className="btn hover:animate-pulse text-gray-100 btn-lg mt-8">
-              MAKE A RESERVATION
-            </button>
+            <ButtonOne className="mx-auto">
+              Order now
+            </ButtonOne>
           </div>
-        </Fade>
-        <Fade bottom big cascade duration={1500}>
-          <div className="grid lg:grid-cols-2 grid-cols-2">
-            <img
-              src="https://images.squarespace-cdn.com/content/v1/6434de7a3f788a47f32b88e8/53005c28-587d-4557-991f-cd73e417a241/Middle+Eastern+Seabass+vegetables.png?format=500w"
-              alt=""
-              className="rounded-md lg:max-w-sm lg:max-h-96"
-            />
-            <img
-              src="https://images.squarespace-cdn.com/content/v1/6434de7a3f788a47f32b88e8/6813ac3c-42e8-4480-adcc-20887753dba4/middle-eastern-kookoo-sabzi+-atlanta+copy.png?format=500w"
-              alt=""
-              className="rounded-md lg:max-w-sm lg:max-h-96"
-            />
-          </div>
-        </Fade>
+        </Slide>
+        <Slide bottom>
+          <img
+            src="https://static.wixstatic.com/media/ffffbd_92be01c0c372410c85d59f4f1f9c908a~mv2.jpg/v1/fill/w_489,h_575,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/ffffbd_92be01c0c372410c85d59f4f1f9c908a~mv2.jpg"
+            alt=""
+            className="rounded-md mx-auto"
+          />
+        </Slide>
+
       </div>
+
+
     </section>
   );
 };
