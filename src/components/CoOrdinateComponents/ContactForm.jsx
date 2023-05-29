@@ -1,16 +1,17 @@
-import React from "react";
-import { Fade } from "react-reveal";
+import React from 'react';
+import { Fade } from 'react-reveal';
 const ContactForm = () => {
   return (
-    <div className="py-12">
-      <Fade bottom big cascade duration={1500}>
-        <h1 className="text-5xl text-center text-gray-100 pt-12">
-          Get in touch with our Event Coordinator
-        </h1>
-        <h1 className="text-3xl text-center text-gray-100 py-12">
-          African Soul Food AT YOUR SERVICE
-        </h1>
-        <form action="" className="lg:w-1/2 w-full lg:p-1 p-2 mx-auto">
+    <div>
+      <Fade
+        bottom
+        big
+        duration={1500}
+      >
+        <form
+          action=""
+          className="lg:w-1/2 w-full lg:p-1 p-2 mx-auto"
+        >
           <div className="flex gap-2 my-1">
             <div className="form-control w-full max-w-xs">
               <label className="label">
@@ -105,7 +106,7 @@ const ContactForm = () => {
             <div className="form-control w-full">
               <label className="label">
                 <span className="label-text text-gray-100">
-                  {" "}
+                  {' '}
                   Your Event Details*
                 </span>
               </label>
@@ -134,7 +135,10 @@ const ContactForm = () => {
               <label className="label">
                 <span className="label-text text-gray-100"> Start Time</span>
               </label>
-              <input type="time" className="input input-bordered w-full " />
+              <input
+                type="time"
+                className="input input-bordered w-full "
+              />
             </div>
           </div>
           <div className="my-1">
@@ -142,7 +146,10 @@ const ContactForm = () => {
               <label className="label">
                 <span className="label-text text-gray-100"> End Time*</span>
               </label>
-              <input type="time" className="input input-bordered w-full " />
+              <input
+                type="time"
+                className="input input-bordered w-full "
+              />
             </div>
           </div>
           <div className="my-1">
@@ -169,10 +176,11 @@ const ContactForm = () => {
               </label>
               <textarea
                 placeholder="Type here"
-                className="textarea w-full "></textarea>
+                className="textarea w-full "
+              ></textarea>
             </div>
           </div>
-          <button className="btn hover:animate-pulse btn-primary btn-lg my-1">
+          <button className="btn hover:animate-pulse btn-primary btn-lg my-5">
             Submit
           </button>
         </form>

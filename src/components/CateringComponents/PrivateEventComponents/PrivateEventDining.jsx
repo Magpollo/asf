@@ -1,61 +1,83 @@
-import React from "react";
-import { Fade, Zoom } from "react-reveal";
+import React from 'react';
+import { Zoom, Slide } from 'react-reveal';
+import ButtonOne from '../../ShareComponents/ButtonOne';
+import { Link } from 'react-router-dom';
 
 const PrivateEventDining = () => {
   return (
     <>
       <section className="pb-20 pt-12">
-        <Fade bottom big cascade duration={1500}>
-          <h1 className="text-7xl text-center text-gray-100 pt-20">
-            Private Event
+        <Slide
+          bottom
+          duration={1500}
+        >
+          <h1
+            className="text-7xl text-center text-gray-100 pt-20 pb-10 md:pb-0"
+            style={{ fontFamily: "'Zilla Slab', sans-serif" }}
+          >
+            Private Dining
           </h1>
-          <h2 className="lg:text-5xl text-3xl text-center text-gray-100 uppercase pt-12">
-            LET US HOST YOUR NEXT EVENT
-          </h2>
-        </Fade>
-        <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-3 gap-2 items-center p-4">
-          <Zoom bottom big cascade duration={1500}>
+        </Slide>
+        <div className="grid grid-cols-2 lg:gap-3 gap-0 items-center h-fit">
+          <Zoom
+            bottom
+            big
+            cascade
+            duration={1500}
+          >
             <img
-              src="https://images.squarespace-cdn.com/content/v1/6434de7a3f788a47f32b88e8/8473ba96-7552-4071-93c5-61cf1074310b/kookoo+sabzi.jpg?format=1000w"
+              src="https://www.allrecipes.com/thmb/L5tOrLzbNbdV8lyKZ_Y7y3MCE1Q=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/how-to-hold-your-knife-correctly-AdobeStock_510545189-3x2-1-2fe1e62ed82044689ea838650a414fe5.jpg"
               alt=""
               className="w-full lg:h-[75%]"
             />
             <img
-              src="https://images.squarespace-cdn.com/content/v1/6434de7a3f788a47f32b88e8/8473ba96-7552-4071-93c5-61cf1074310b/kookoo+sabzi.jpg?format=1000w"
+              src="https://res.cloudinary.com/dqpzrfqgh/image/upload/v1685392021/asf/IMG_4642_toplkq.jpg"
               alt=""
               className="w-full lg:h-[75%]"
             />
           </Zoom>
         </div>
-        <Fade bottom big cascade duration={1500}>
-          <h1 className="text-7xl text-center text-gray-100 pt-12">
-            Private Dining
-          </h1>
-          <div className="flex gap-16 justify-center my-16">
-            <button className="btn hover:animate-bounce btn-primary lg:btn-lg">
-              SET MENUS
-            </button>
-            <button className="btn hover:animate-bounce btn-primary lg:btn-lg">
-              ROOM MINIMUMS
-            </button>
+        <Slide
+          bottom
+          big
+        >
+          <h2
+            className="lg:text-5xl text-3xl text-center text-gray-100 mb-10 mt-10 md:mt-0"
+            style={{ fontFamily: "'Jelytta', sans-serif" }}
+          >
+            Let's host your next event!
+          </h2>
+          <div className="flex flex-col md:flex-row md:gap-16 justify-center w-fit mx-auto">
+            <ButtonOne>SET MENUS</ButtonOne>
+            <ButtonOne>ROOM MINIMUMS</ButtonOne>
           </div>
           <p className="text-xl text-center text-gray-100 lg:w-[50%] w-[80%] pt-12 mx-auto">
             For more information about a private dinner or group event at
             African Soul Food, please click on “Book An Event” and fill out the
             inquiry form.
           </p>
-          <div className="flex gap-16 justify-center my-16">
-            <button className="btn hover:animate-bounce btn-outline outline border-gray-100 text-gray-100 lg:btn-lg">
-              BOOK AN EVENT
-            </button>
+          <div className="flex gap-16 justify-center mt-5">
+            <Link to="/events">
+              <ButtonOne>BOOK AN EVENT</ButtonOne>
+            </Link>
           </div>
-        </Fade>
-        <div className="my-12">
-          <Zoom bottom big cascade duration={1500}>
+        </Slide>
+        <div className="grid grid-cols-2 gap-0 items-center h-fit">
+          <Zoom
+            bottom
+            big
+            cascade
+            duration={1500}
+          >
             <img
-              src="https://images.squarespace-cdn.com/content/v1/6434de7a3f788a47f32b88e8/255cb487-74e4-43c6-b825-09f642962fc5/middle-eastern-catering-cuisine.jpg?format=2500w"
+              src="https://res.cloudinary.com/dqpzrfqgh/image/upload/v1685392009/asf/IMG_4661_o4qiqg.jpg"
               alt=""
-              className="w-full px-2"
+              className="w-full lg:h-[75%]"
+            />
+            <img
+              src="https://res.cloudinary.com/dqpzrfqgh/image/upload/v1685392032/asf/IMG_4686_k2e630.jpg"
+              alt=""
+              className="w-full lg:h-[75%]"
             />
           </Zoom>
         </div>

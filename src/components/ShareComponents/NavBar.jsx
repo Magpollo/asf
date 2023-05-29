@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
-import logo from "../../assets/ASF_logo.png";
-import greenBg from "../../assets/green.png";
+import React, { useEffect, useRef, useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import logo from '../../assets/ASF_logo.png';
+import greenBg from '../../assets/green.png';
 const NavBar = () => {
   const [isClicked, setClicked] = useState(false);
 
@@ -11,10 +11,11 @@ const NavBar = () => {
         <NavLink
           className={({ isActive }) =>
             `${
-              isActive ? "text-red-500" : "text-gray-100"
+              isActive ? 'text-red-500' : 'text-gray-100'
             } hover:text-yellow-300 transition-all duration-500 ease-in-out font-bold`
           }
-          to={"/"}>
+          to={'/'}
+        >
           Home
         </NavLink>
       </li>
@@ -22,10 +23,23 @@ const NavBar = () => {
         <NavLink
           className={({ isActive }) =>
             `${
-              isActive ? "text-red-500" : "text-gray-100"
+              isActive ? 'text-red-500' : 'text-gray-100'
             } hover:text-yellow-300 transition-all duration-500 ease-in-out font-bold`
           }
-          to={"/catering"}>
+          to="/menu"
+        >
+          View Menu
+        </NavLink>
+      </li>
+      <li className="lg:py-0 py-3">
+        <NavLink
+          className={({ isActive }) =>
+            `${
+              isActive ? 'text-red-500' : 'text-gray-100'
+            } hover:text-yellow-300 transition-all duration-500 ease-in-out font-bold`
+          }
+          to={'/catering'}
+        >
           Catering
         </NavLink>
       </li>
@@ -33,44 +47,37 @@ const NavBar = () => {
         <NavLink
           className={({ isActive }) =>
             `${
-              isActive ? "text-red-500" : "text-gray-100"
+              isActive ? 'text-red-500' : 'text-gray-100'
             } hover:text-yellow-300 transition-all duration-500 ease-in-out font-bold`
           }
-          to="/private-dining">
+          to="/private-dining"
+        >
           Private Dining
         </NavLink>
       </li>
+
+      <li className="lg:py-0 py-3">
+        <NavLink
+          className="text-gray-100 hover:text-yellow-300 transition-all duration-500 ease-in-out font-bold"
+          onClick={() =>
+            window.location.replace(
+              'https://www.toasttab.com/theafricansoulfood/v3'
+            )
+          }
+        >
+          Order Online
+        </NavLink>
+      </li>
       <li className="lg:py-0 py-3">
         <NavLink
           className={({ isActive }) =>
             `${
-              isActive ? "text-red-500" : "text-gray-100"
+              isActive ? 'text-red-500' : 'text-gray-100'
             } hover:text-yellow-300 transition-all duration-500 ease-in-out font-bold`
           }
-          to="/careers">
+          to="/careers"
+        >
           Careers
-        </NavLink>
-      </li>
-      <li className="lg:py-0 py-3">
-        <NavLink
-          className={({ isActive }) =>
-            `${
-              isActive ? "text-red-500" : "text-gray-100"
-            } hover:text-yellow-300 transition-all duration-500 ease-in-out font-bold`
-          }
-          to="/about">
-          About
-        </NavLink>
-      </li>
-      <li className="lg:py-0 py-3">
-      <NavLink
-          className={({ isActive }) =>
-            `${
-              isActive ? "text-red-500" : "text-gray-100"
-            } hover:text-yellow-300 transition-all duration-500 ease-in-out font-bold`
-          }
-          to="/about">
-          View Menu
         </NavLink>
       </li>
     </>
@@ -78,28 +85,38 @@ const NavBar = () => {
   return (
     <>
       <section className="container relative mx-auto w-full">
-        <nav className="flex justify-between items-center py-5 " id="backToTop">
-          <div style={{zIndex: "6"}} >
+        <nav
+          className="flex justify-between items-center py-5 "
+          id="backToTop"
+        >
+          <div style={{ zIndex: '6' }}>
             <Link to="/">
-              <img src={logo} className="h-10 " />
+              <img
+                src={logo}
+                className="h-10 "
+              />
             </Link>
           </div>
           {/* Mobile menu here start*/}
-          <div style={{ zIndex: "4" }}
+          <div
+            style={{ zIndex: '4' }}
             // style={{ display: "block", width: "100%" }}
-            className=" lg:hidden block">
+            className=" lg:hidden block"
+          >
             {/* Hamburger Icon */}
             <label
               onClick={() => setClicked(!isClicked)}
               tabIndex={0}
-              className="btn btn-primary lg:hidden">
+              className="btn btn-primary lg:hidden"
+            >
               {isClicked ? (
                 <svg
                   className="block h-6 w-6"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke="currentColor">
+                  stroke="currentColor"
+                >
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -113,7 +130,8 @@ const NavBar = () => {
                   className="h-6 w-6"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke="#ff0000">
+                  stroke="#ff0000"
+                >
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -126,19 +144,20 @@ const NavBar = () => {
             <ul
               style={{
                 backgroundImage: `url(${greenBg})`,
-                height:"100vh",
-                zIndex: "-1",
-                padding:"20vh",
-                fontSize: "2em",
-                lineHeight: "7vh",
+                height: '100vh',
+                zIndex: '-1',
+                padding: '20vh',
+                fontSize: '2em',
+                lineHeight: '7vh',
                 fontFamily: "'Zilla Slab', sans-serif",
-                margin:"auto",
-                marginTop: "-88px",
+                margin: 'auto',
+                marginTop: '-88px',
               }}
               tabIndex={0}
               className={`${
-                !isClicked ? "hidden " : "text-gray-100"
-              } absolute top-[100%] left-0 w-full m-0 p-0 list-none bg-transparent border-none text-xl z-50 shadow text-center`}>
+                !isClicked ? 'hidden ' : 'text-gray-100'
+              } absolute top-[100%] left-0 w-full m-0 p-0 list-none bg-transparent border-none text-xl z-50 shadow text-center`}
+            >
               {/* this menu for mobile */}
               {commonLi}
             </ul>

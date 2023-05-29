@@ -1,16 +1,16 @@
-import React from "react";
+import React from 'react';
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation, Pagination } from 'swiper';
 // Import Swiper styles
-import "./CateringSwiperCarousel.css";
-import "swiper/css/navigation";
-import "swiper/css";
-import "swiper/css/pagination";
+import './CateringSwiperCarousel.css';
+import 'swiper/css/navigation';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 const CateringSwiperCarousel = () => {
   return (
-    <section className="pt-40 pb-12">
+    <section className="pt-20 md:pt-40 pb-12">
       <Swiper
         slidesPerView={1.3}
         spaceBetween={30}
@@ -25,30 +25,30 @@ const CateringSwiperCarousel = () => {
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
         centeredSlides={true}
-        className="">
+        className=""
+      >
         <SwiperSlide>
           <img
-            src="https://images.squarespace-cdn.com/content/v1/6434de7a3f788a47f32b88e8/1681442270321-YKY4K5MBMDHZAU50G45L/middle-eastern-cuisine-atlanta-georgia.jpg?format=2500w"
+            src="https://res.cloudinary.com/dqpzrfqgh/image/upload/v1685390064/asf/IMG_4650_blpade.jpg"
             className="w-full rounded-xl"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://images.squarespace-cdn.com/content/v1/6434de7a3f788a47f32b88e8/1681442263532-PV8VNLLNRY6HMLQCELED/Adas+Polo+-+Cocktail.jpg?format=2500w"
+            src="https://res.cloudinary.com/dqpzrfqgh/image/upload/v1685390338/asf/IMG_4655_znlhx7.jpg"
             className="w-full rounded-xl"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://images.squarespace-cdn.com/content/v1/6434de7a3f788a47f32b88e8/7916bafe-4f9f-49d9-947c-51e515bcb998/Delbar+Breakfast+Platter.jpg?format=2500w"
+            src="https://res.cloudinary.com/dqpzrfqgh/image/upload/v1685390480/asf/IMG_4659_kgnjft.jpg"
             className="w-full rounded-xl"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://images.squarespace-cdn.com/content/v1/6434de7a3f788a47f32b88e8/1681442263532-PV8VNLLNRY6HMLQCELED/Adas+Polo+-+Cocktail.jpg?format=2500w"
+            src="https://res.cloudinary.com/dqpzrfqgh/image/upload/v1685390628/asf/IMG_4676_dujhaz.jpg"
             className="w-full rounded-xl"
-            
           />
         </SwiperSlide>
       </Swiper>
