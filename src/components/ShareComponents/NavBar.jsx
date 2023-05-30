@@ -36,12 +36,10 @@ const NavBar = () => {
       <li className="lg:py-0 py-3">
         <NavLink
           onClick={() => setClicked(false)}
-          className={({ isActive }) =>
-            `${
-              isActive ? 'text-red-500' : 'text-gray-100'
-            } hover:text-yellow-300 transition-all duration-500 ease-in-out font-bold`
+          className={
+            'text-gray-100 hover:text-yellow-300 transition-all duration-500 ease-in-out font-bold'
           }
-          to="/menu"
+          to={'/'}
         >
           View Menu
         </NavLink>
@@ -81,6 +79,7 @@ const NavBar = () => {
               'https://www.toasttab.com/theafricansoulfood/v3'
             )
           }
+          to={'/'}
         >
           Order Online
         </NavLink>
@@ -171,9 +170,10 @@ const NavBar = () => {
                 transition: 'opacity 0.4s ease-in-out',
                 opacity: isClicked ? 1 : 0,
                 paddingTop: '20vh',
+                display: isClicked ? 'block' : 'none',
               }}
               tabIndex={0}
-              className="mx-auto left-0 h-screen w-full fixed top-0 bottom-0 overflow-hidden overscroll-none"
+              className="mx-auto left-0 h-full w-full fixed top-0"
             >
               {/* this menu for mobile */}
               {commonLi}

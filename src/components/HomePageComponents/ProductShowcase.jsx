@@ -17,7 +17,7 @@ const ProductShowcase = () => {
       <Slide bottom>
         <h2
           style={{ fontFamily: "'Jelytta', sans-serif" }}
-          className="lg:text-6xl text-4xl text-center my-10 text-black-100"
+          className="md:text-6xl text-3xl text-center my-10 text-black-100 px-5 md:px-0"
         >
           African Flavour Beckons
         </h2>
@@ -36,17 +36,22 @@ const ProductShowcase = () => {
           Savor the flavors of Africa at African Soul Food . Join us for a
           memorable dining experience and explore the culinary wonders of the
           continent.{' '}
-          <Link
-            className="text-red-500 border-b-2 border-red-500"
-            to={'/'}
-          >
+          <Link className="text-red-500 border-b-2 border-red-500">
             View Menu
           </Link>
         </p>
       </Slide>
       <div className="max-w-xl mx-auto text-center">
         <Slide bottom>
-          <ButtonOne>Order Online</ButtonOne>
+          <ButtonOne
+            onClick={() =>
+              window.location.replace(
+                'https://www.toasttab.com/theafricansoulfood/v3'
+              )
+            }
+          >
+            Order Online
+          </ButtonOne>
         </Slide>
 
         <Slide bottom>

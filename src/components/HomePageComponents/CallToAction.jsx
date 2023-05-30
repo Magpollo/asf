@@ -18,7 +18,7 @@ const CallToAction = () => {
       <Slide bottom>
         <h1
           style={{ fontFamily: "'Zilla Slab', sans-serif" }}
-          className="lg:text-5xl text-3xl text-gray-100 text-center mb-10"
+          className="lg:text-5xl text-3xl text-gray-100 text-center mb-10 px-2 md:px-0"
         >
           Celebrate your special occasion at African Soul Food
         </h1>

@@ -69,9 +69,9 @@ const MakeReservation = () => {
         </Slide>
       </div>
 
-      <div className="grid lg:grid-cols-2 grid-cols-1 items-center w-4/4 mx-auto py-4 mt-8 pb-10 md:pb-0">
+      <div className="grid lg:grid-cols-2 grid-cols-1 items-center w-4/4 mx-auto py-4 md:mt-8 pb-10 md:pb-0">
         <Slide bottom>
-          <div className="lg:px-10 mx-auto text-center">
+          <div className="lg:px-10 mx-auto text-center order-2 md:order-1">
             <h2
               style={{ fontFamily: "'Zilla Slab', sans-serif" }}
               className="lg:text-4xl text-4xl text-center my-5 text-black-100"
@@ -98,7 +98,7 @@ const MakeReservation = () => {
           <img
             src="https://static.wixstatic.com/media/ffffbd_92be01c0c372410c85d59f4f1f9c908a~mv2.jpg/v1/fill/w_489,h_575,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/ffffbd_92be01c0c372410c85d59f4f1f9c908a~mv2.jpg"
             alt=""
-            className="rounded-md mx-auto"
+            className="rounded-md mx-auto md:order-last"
           />
         </Slide>
       </div>

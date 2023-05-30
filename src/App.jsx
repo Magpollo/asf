@@ -49,18 +49,18 @@ function App() {
           }
         />
         <Route
-          path="/private-dining"
-          element={
-            <Element name="privateDiningScroll">
-              <WrappedPrivateDining />
-            </Element>
-          }
-        />
-        <Route
           path="/events"
           element={
             <Element name="aboutScroll">
               <WrappedEventsForm />
+            </Element>
+          }
+        />
+        <Route
+          path="/private-dining"
+          element={
+            <Element name="privateDiningScroll">
+              <WrappedPrivateDining />
             </Element>
           }
         />
