@@ -80,20 +80,44 @@ const CallToAction = () => {
           </Slide>
         </div>
 
-        <Slide bottom>
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/7/76/Stamp-kenya1963-coffee-industry.jpeg"
-            alt=""
-            className="lg:w-1/2 md:w-1/4 w-1/4 mx-auto my-5 order-last md:order-1"
-          />
-        </Slide>
-        <Slide bottom>
-          <img
-            src={africa}
-            alt=""
-            className="lg:w-1/2 md:w-1/4 w-1/4 mx-auto my-5 order-1 md:order-last"
-          />
-        </Slide>
+        <div className='flex flex-col order-first gap-4'>
+          <Slide bottom>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/7/76/Stamp-kenya1963-coffee-industry.jpeg"
+              alt=""
+              className="lg:w-1/2 md:w-1/4 w-1/4 mx-auto my-2"
+            />
+          </Slide>
+
+          <Slide bottom>
+
+            <img
+              src={africa}
+              alt=""
+              className="lg:w-1/2 md:w-1/4 w-1/4 mx-auto my-5"
+            />
+          </Slide>
+        </div>
+
+        <div className="flex flex-col order-last gap-4">
+          <Slide bottom>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/9/91/SEN_1914_MiNr054_mt_B002.jpg"
+              alt=""
+              className="lg:w-1/2 md:w-1/4 w-1/4 mx-auto my-5"
+            />
+          </Slide>
+
+
+          <Slide bottom>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/a/ab/1953_Nigeria_10_Shilling_stamp.jpg"
+              alt=""
+              className="lg:w-1/2 md:w-1/4 w-1/4 mx-auto my-5"
+            />
+          </Slide>
+        </div>
+
       </div>
     </section>
   );
