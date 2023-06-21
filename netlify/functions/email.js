@@ -5,18 +5,25 @@ export const handler = async (event, context) => {
   const message = JSON.parse(body);
 
   try {
-    const account = await nodemailer.createTestAccount();
-    console.log('Test account created, sending message...');
+    let account = {
+      user: process.env.SENDINBLUE_USER,
+      pass: process.env.SENDINBLUE_PASS,
+    };
 
-    let transporter = nodemailer.createTransport({
-      host: 'smtp.ethereal.email',
-      port: 587,
-      secure: false,
-      auth: {
-        user: account.user,
-        pass: account.pass,
+    let transporter = nodemailer.createTransport(
+      {
+        host: 'smtp-relay.sendinblue.com',
+        port: 587,
+        secure: false,
+        auth: {
+          user: account.user,
+          pass: account.pass,
+        },
       },
-    });
+      {
+        from: account.user,
+      }
+    );
     console.log('Transporter created...');
 
     const info = await transporter.sendMail(message);
