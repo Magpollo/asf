@@ -11,13 +11,14 @@ export async function sendMail(props, type) {
       : render(<Application {...props} />);
 
   // read resume file using FileReader API
-  const reader = new FileReader();
-  reader.readAsDataURL(props.resume);
-  let resume = '';
-  reader.onload = () => {
-    console.log('Resume loaded');
-    resume = reader.result;
-  };
+  async function readFile(file) {
+    return new Promise((resolve, reject) => {
+      let reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = (error) => reject(error);
+    });
+  }
 
   const message = {
     subject:
@@ -34,10 +35,12 @@ export async function sendMail(props, type) {
     attachments: [
       {
         filename: props.resume.name,
-        path: resume,
+        path: await readFile(props.resume),
       },
     ],
   };
+
+  console.log(message.attachments);
 
   try {
     // send message object to netlify function
