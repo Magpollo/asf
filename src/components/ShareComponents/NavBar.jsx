@@ -72,17 +72,14 @@ const NavBar = () => {
       </li>
 
       <li className="lg:py-0 py-3">
-        <NavLink
+        <a
           className="text-gray-100 hover:text-yellow-300 transition-all duration-500 ease-in-out font-bold"
-          onClick={() =>
-            window.location.replace(
-              'https://www.toasttab.com/theafricansoulfood/v3'
-            )
-          }
-          to={'/'}
+          href="https://www.toasttab.com/theafricansoulfood/v3"
+          target="_blank"
+          rel="noreferrer"
         >
           Order Online
-        </NavLink>
+        </a>
       </li>
       <li className="lg:py-0 py-3">
         <NavLink
