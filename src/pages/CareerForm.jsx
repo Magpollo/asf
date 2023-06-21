@@ -4,6 +4,7 @@ import usePageTitle from '../Hooks/usePageTitle';
 import { useFormik } from 'formik';
 import { contactSchema } from '../Hooks/validateInputs';
 import { Fade } from 'react-reveal';
+import { sendMail } from '../Hooks/sendMail';
 
 const EvenCoOrdinatorPage = () => {
   usePageTitle('Careers | We are hiring!');
@@ -22,8 +23,9 @@ const EvenCoOrdinatorPage = () => {
       resume: null,
     },
     validationSchema: contactSchema,
-    onSubmit: (values) => {
+    onSubmit: async (values) => {
       console.log(values);
+      await sendMail(values, 'application');
     },
   });
 

@@ -40,7 +40,6 @@ const CateringMenu = () => {
         >
           <div className="flex flex-col md:flex-row gap-6 my-5 w-fit mx-auto">
             <ButtonOne>CATERING MENUS</ButtonOne>
-            <ButtonOne>EZ CATER</ButtonOne>
             <Link to="/events">
               <ButtonOne>CATERING INQUIRY</ButtonOne>
             </Link>

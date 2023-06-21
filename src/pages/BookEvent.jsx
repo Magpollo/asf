@@ -4,6 +4,7 @@ import usePageTitle from '../Hooks/usePageTitle';
 import { Fade } from 'react-reveal';
 import { useFormik } from 'formik';
 import { bookingSchema } from '../Hooks/validateInputs';
+import { sendMail } from '../Hooks/sendMail';
 
 const EventPage = () => {
   usePageTitle('African Soulfood | Book Event');
@@ -24,8 +25,9 @@ const EventPage = () => {
       additionalInfo: '',
     },
     validationSchema: bookingSchema,
-    onSubmit: (values) => {
+    onSubmit: async (values) => {
       console.log(values);
+      await sendMail(values, 'event');
     },
   });
 
