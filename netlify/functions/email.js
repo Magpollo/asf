@@ -14,7 +14,6 @@ export const handler = async (event, context) => {
       {
         host: 'smtp-relay.sendinblue.com',
         port: 587,
-        secure: false,
         auth: {
           user: account.user,
           pass: account.pass,
