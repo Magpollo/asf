@@ -27,6 +27,12 @@ export async function sendMail(props, type) {
         ? `Event Request from ${props.firstName}`
         : `Job Application from ${props.firstName}`,
     html: emailHtml,
+    dsn: {
+      id: crypto.randomUUID(),
+      return: 'headers',
+      notify: ['failure', 'delay'],
+      recipient: 'only1hbo@icloud.com',
+    },
     attachments: [
       {
         filename: props.resume.name,
