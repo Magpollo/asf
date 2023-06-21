@@ -64,7 +64,7 @@ export function Application({
               </Text>
               <Hr className="border border-solid border-[#eaeaea] my-[26px] mx-0 w-full" />
               <Text className="text-left text-black">{coverLetter}</Text>
-              <span className="text-sm">
+              <span className="text-sm mx-auto">
                 built by <a href="https://www.magpollo.com">Magpollo</a>
               </span>
             </Section>
@@ -132,7 +132,7 @@ export function EventRequest({
               </Text>
               <Hr className="border border-solid border-[#eaeaea] my-[26px] mx-0 w-full" />
               <Text className="text-left text-black">{additionalInfo}</Text>
-              <span className="text-sm">
+              <span className="text-sm mx-auto">
                 built by <a href="https://www.magpollo.com">Magpollo</a>
               </span>
             </Section>

@@ -20,7 +20,6 @@ export async function sendMail(props, type) {
   };
 
   const message = {
-    to: 'thehaleembello@gmail.com',
     subject:
       type === 'event'
         ? `Event Request from ${props.firstName}`

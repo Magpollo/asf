@@ -40,6 +40,7 @@ const NavBar = () => {
           href={pdf}
           target="_blank"
           rel="noreferrer"
+          onClick={() => setClicked(false)}
         >
           View Menu
         </a>
@@ -77,6 +78,7 @@ const NavBar = () => {
           href="https://www.toasttab.com/theafricansoulfood/v3"
           target="_blank"
           rel="noreferrer"
+          onClick={() => setClicked(false)}
         >
           Order Online
         </a>

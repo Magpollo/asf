@@ -2,7 +2,8 @@ import nodemailer from 'nodemailer';
 
 export const handler = async (event, context) => {
   const { body } = event;
-  const message = JSON.parse(body);
+  let message = JSON.parse(body);
+  message.to = process.env.RECIPIENT_MAIL;
 
   try {
     let account = {
@@ -20,7 +21,7 @@ export const handler = async (event, context) => {
         },
       },
       {
-        from: account.user,
+        from: `African Soulfood Web Notification <${account.user}>`,
       }
     );
     console.log('Transporter created...');
