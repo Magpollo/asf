@@ -3,6 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { Slide } from 'react-reveal';
 import logo from '../../assets/ASF_logo.png';
 import greenBg from '../../assets/green.png';
+import pdf from '../../assets/ASF_Catering_Menu.pdf';
 
 const NavBar = () => {
   const [isClicked, setClicked] = useState(false);
@@ -34,15 +35,14 @@ const NavBar = () => {
         </NavLink>
       </li>
       <li className="lg:py-0 py-3">
-        <NavLink
-          onClick={() => setClicked(false)}
-          className={
-            'text-gray-100 hover:text-yellow-300 transition-all duration-500 ease-in-out font-bold'
-          }
-          to={'/'}
+        <a
+          className="text-gray-100 hover:text-yellow-300 transition-all duration-500 ease-in-out font-bold"
+          href={pdf}
+          target="_blank"
+          rel="noreferrer"
         >
           View Menu
-        </NavLink>
+        </a>
       </li>
       <li className="lg:py-0 py-3">
         <NavLink
