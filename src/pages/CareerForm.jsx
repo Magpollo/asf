@@ -218,6 +218,7 @@ const EvenCoOrdinatorPage = () => {
                       formik.setFieldValue('resume', e.target.files[0]);
                     }}
                     onBlur={formik.handleBlur}
+                    accept="application/pdf, application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document, .doc, .docx, .pdf, .txt"
                   />
                   {formik.touched.resume && formik.errors.resume ? (
                     <div className="text-[#F7CC32] text-xs">

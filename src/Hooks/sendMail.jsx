@@ -40,8 +40,6 @@ export async function sendMail(props, type) {
     ],
   };
 
-  console.log(message.attachments);
-
   try {
     // send message object to netlify function
     const response = await fetch('/.netlify/functions/email', {
