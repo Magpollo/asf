@@ -40,6 +40,9 @@ export async function sendMail(props, type) {
     const response = await fetch('/.netlify/functions/email', {
       method: 'POST',
       body: JSON.stringify(message),
+      headers: {
+        'Content-Type': 'application/json',
+      },
     });
 
     if (response.status === 200) {

@@ -1,8 +1,8 @@
 import nodemailer from 'nodemailer';
 
 export const handler = async (event, context) => {
-  const { message } = JSON.parse(event.body);
-  console.log(message);
+  const { body } = event;
+  const message = JSON.parse(body);
 
   try {
     const account = await nodemailer.createTestAccount();
