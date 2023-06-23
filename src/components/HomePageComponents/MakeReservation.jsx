@@ -56,7 +56,7 @@ const MakeReservation = () => {
             >
               The African Kebob
             </h4>
-            <p className="w-3/4 mx-auto">
+            <p className="w-3/4 md:w-52 mx-auto">
               Suya or tsire is a spicy meat skewer which is a popular food item
               in our home of West Africa. Our Suya is made with spicy, skewered
               beef. It is marinated in spices (Yaji) which include peanut cake,
@@ -84,7 +84,7 @@ const MakeReservation = () => {
             >
               Ogbono soup highlighted
             </h4>
-            <p className="w-3/4 mx-auto">
+            <p className="w-3/4 md:w-52 mx-auto">
               Africa is the home of hearty, healthy soups. All made from
               scratch, African soups are filled with lots of green vegetables
               and fresh meats. This month's highlighted soup is rich and savory
@@ -98,7 +98,7 @@ const MakeReservation = () => {
           <img
             src="https://static.wixstatic.com/media/ffffbd_92be01c0c372410c85d59f4f1f9c908a~mv2.jpg/v1/fill/w_489,h_575,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/ffffbd_92be01c0c372410c85d59f4f1f9c908a~mv2.jpg"
             alt=""
-            className="rounded-md mx-auto md:order-last"
+            className="rounded-md mx-auto"
           />
         </Slide>
       </div>

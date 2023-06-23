@@ -12,12 +12,15 @@ const HomePage = () => {
   return (
     <>
       <main>
-        <section style={{
-          backgroundImage: `url(${bgPattern})`,
-          width: "100%",
-          zIndex: "-1",
-          marginTop: "-10vh",
-        }} className="mx-auto">
+        <section
+          style={{
+            backgroundImage: `url(${bgPattern})`,
+            width: '100%',
+            zIndex: '-1',
+            marginTop: '-30vh',
+          }}
+          className="mx-auto pt-28"
+        >
           <SwiperCarousel />
           <ProductShowcase />
           <MakeReservation />

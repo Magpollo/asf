@@ -10,8 +10,8 @@ import CareerForm from './pages/CareerForm';
 import CateringPage from './pages/CateringPage';
 import PrivateDining from './pages/PrivateDining';
 import EventsForm from './pages/BookEvent';
+import Menus from './pages/Menus';
 import { Element } from 'react-scroll';
-import bgPattern from './assets/Pattern.png';
 
 function App() {
   const WrappedHomePage = CustomSpinner(HomePage);
@@ -20,6 +20,8 @@ function App() {
   const WrappedPrivateDining = CustomSpinner(PrivateDining);
   const WrappedEventsForm = CustomSpinner(EventsForm);
   const WrappedAErrorPage = CustomSpinner(ErrorPage);
+  const WrappedMenus = CustomSpinner(Menus);
+
   return (
     <>
       <NavBar />
@@ -51,7 +53,7 @@ function App() {
         <Route
           path="/events"
           element={
-            <Element name="aboutScroll">
+            <Element name="eventScroll">
               <WrappedEventsForm />
             </Element>
           }
@@ -61,6 +63,14 @@ function App() {
           element={
             <Element name="privateDiningScroll">
               <WrappedPrivateDining />
+            </Element>
+          }
+        />
+        <Route
+          path="/menus"
+          element={
+            <Element name="menuScroll">
+              <WrappedMenus />
             </Element>
           }
         />

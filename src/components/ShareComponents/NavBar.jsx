@@ -1,9 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Slide } from 'react-reveal';
-import logo from '../../assets/ASF_logo.png';
+import logo from '../../assets/ASF_logo_color.png';
 import greenBg from '../../assets/green.png';
-import pdf from '../../assets/ASF_Catering_Menu.pdf';
 
 const NavBar = () => {
   const [isClicked, setClicked] = useState(false);
@@ -35,15 +34,17 @@ const NavBar = () => {
         </NavLink>
       </li>
       <li className="lg:py-0 py-3">
-        <a
-          className="text-gray-100 hover:text-yellow-300 transition-all duration-500 ease-in-out font-bold"
-          href={pdf}
-          target="_blank"
-          rel="noreferrer"
+        <NavLink
           onClick={() => setClicked(false)}
+          className={({ isActive }) =>
+            `${
+              isActive ? 'text-red-500' : 'text-gray-100'
+            } hover:text-yellow-300 transition-all duration-500 ease-in-out font-bold`
+          }
+          to={'/menus'}
         >
-          View Menu
-        </a>
+          View Menus
+        </NavLink>
       </li>
       <li className="lg:py-0 py-3">
         <NavLink
@@ -100,27 +101,30 @@ const NavBar = () => {
   );
   return (
     <>
-      <section className="container relative mx-auto w-full px-4 lg:px-24">
+      <section className="mx-auto w-full px-4 lg:px-24">
         <nav
-          className="flex justify-between items-center py-5 "
+          className="flex justify-between items-center py-4 lg:py-0"
           id="backToTop"
         >
-          <div style={{ zIndex: '6' }}>
+          <div>
             <Link to="/">
               <img
                 src={logo}
-                className="h-10 "
+                alt="ASF Logo"
+                height={150}
+                width={150}
+                className="w-28 md:w-40 h-20"
               />
             </Link>
           </div>
           {/* Mobile menu here start*/}
           <div
-            style={{ zIndex: '4' }}
+            style={{ zIndex: '6' }}
             // style={{ display: "block", width: "100%" }}
             className=" lg:hidden block"
           >
             {/* Hamburger Icon */}
-            <label
+            <div
               onClick={() => setClicked(!isClicked)}
               tabIndex={0}
               className="btn btn-primary lg:hidden"
@@ -156,7 +160,7 @@ const NavBar = () => {
                   />
                 </svg>
               )}
-            </label>
+            </div>
             <ul
               style={{
                 backgroundImage: `url(${greenBg})`,

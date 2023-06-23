@@ -12,10 +12,10 @@ const PrivateEventPage = () => {
           backgroundImage: `url(${Pattern})`,
           width: '100%',
           zIndex: '-1',
-          marginTop: '-88px',
+          marginTop: '-20vh',
         }}
       >
-        <div className="container mx-auto">
+        <div className="container mx-auto pt-20">
           <PrivateEventDining />
         </div>
       </section>

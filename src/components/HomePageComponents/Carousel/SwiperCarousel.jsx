@@ -41,7 +41,15 @@ const SwiperCarousel = () => {
           bottom
           className="w-fit"
         >
-          <ButtonOne>Make Reservation</ButtonOne>
+          <ButtonOne
+            onClick={() =>
+              window.location.replace(
+                'https://www.toasttab.com/theafricansoulfood/v3'
+              )
+            }
+          >
+            Make Reservation
+          </ButtonOne>
         </Slide>
       </div>
       <Slide bottom></Slide>

@@ -15,10 +15,10 @@ const CateringPage = () => {
           backgroundImage: `url(${Pattern})`,
           width: '100%',
           zIndex: '-1',
-          marginTop: '-88px',
+          marginTop: '-20vh',
         }}
       >
-        <div className="container mx-auto py-16">
+        <div className="container mx-auto py-16 pt-28">
           <Fade
             bottom
             duration={1500}

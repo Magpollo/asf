@@ -36,7 +36,10 @@ const ProductShowcase = () => {
           Savor the flavors of Africa at African Soul Food . Join us for a
           memorable dining experience and explore the culinary wonders of the
           continent.{' '}
-          <Link className="text-red-500 border-b-2 border-red-500">
+          <Link
+            to="/menus"
+            className="text-red-500 border-b-2 border-red-500"
+          >
             View Menu
           </Link>
         </p>
@@ -55,7 +58,15 @@ const ProductShowcase = () => {
         </Slide>
 
         <Slide bottom>
-          <ButtonOne>Make Reservation</ButtonOne>
+          <ButtonOne
+            onClick={() =>
+              window.location.replace(
+                'https://www.toasttab.com/theafricansoulfood/v3'
+              )
+            }
+          >
+            Make Reservation
+          </ButtonOne>
         </Slide>
       </div>
     </section>

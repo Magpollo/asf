@@ -37,10 +37,10 @@ const EventPage = () => {
         backgroundImage: `url(${Pattern})`,
         width: '100%',
         zIndex: '-1',
-        marginTop: '-88px',
+        marginTop: '-20vh',
       }}
     >
-      <div className="container mx-auto py-24">
+      <div className="container mx-auto py-24 pt-32">
         <h1
           className="text-5xl text-center text-gray-100 pt-12 font-bold"
           style={{ fontFamily: "'Zilla Slab', sans-serif" }}
