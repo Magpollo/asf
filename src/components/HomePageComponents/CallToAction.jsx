@@ -34,11 +34,13 @@ const CallToAction = () => {
                 Opening Hours:
               </h1>
               <p className="text-xl text-center text-gray-100 my-8">
-                Mon - Fri: 8am - 8pm
+                Monday: Closed
                 <br />
-                Saturday: 9am - 7pm
+                Tue - Thur: 12am - 9pm
                 <br />
-                Sunday: 9am - 8pm
+                Fri & Sat: 12am - 10pm
+                <br />
+                Sunday: 12am - 6pm
               </p>
             </div>
             <div className="my-5">
