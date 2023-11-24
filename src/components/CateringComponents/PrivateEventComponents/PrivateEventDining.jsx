@@ -12,7 +12,7 @@ const PrivateEventDining = () => {
           duration={1500}
         >
           <h1
-            className="text-7xl text-center text-gray-100 pt-20 pb-10 md:pb-0"
+            className="text-7xl text-center text-gray-100 pt-20 pb-10"
             style={{ fontFamily: "'Zilla Slab', sans-serif" }}
           >
             Private Dining
@@ -42,7 +42,7 @@ const PrivateEventDining = () => {
           big
         >
           <h2
-            className="lg:text-5xl text-3xl text-center text-gray-100 mb-10 mt-10 md:mt-0"
+            className="lg:text-5xl text-3xl text-center text-gray-100 mb-10 mt-10"
             style={{ fontFamily: "'Jelytta', sans-serif" }}
           >
             Let's host your next event!

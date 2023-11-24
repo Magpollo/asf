@@ -54,7 +54,6 @@ const EvenCoOrdinatorPage = () => {
         <div>
           <Fade
             direction="down"
-            big
             duration={1500}
           >
             <form
