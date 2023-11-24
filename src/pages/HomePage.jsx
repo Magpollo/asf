@@ -5,7 +5,6 @@ import CallToAction from '../components/HomePageComponents/CallToAction';
 import MakeReservation from '../components/HomePageComponents/MakeReservation';
 import bgPattern from '../assets/Pattern.png';
 import usePageTitle from '../Hooks/usePageTitle';
-import { Bounce } from 'react-reveal';
 
 const HomePage = () => {
   usePageTitle('Home Page');

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Slide } from 'react-reveal';
+import { Slide } from 'react-awesome-reveal';
 import bgPattern from '../../assets/green.png';
 import africa from '../../assets/africa.png';
 
@@ -15,7 +15,7 @@ const CallToAction = () => {
         marginTop: '0px',
       }}
     >
-      <Slide bottom>
+      <Slide direction="down">
         <h1
           style={{ fontFamily: "'Zilla Slab', sans-serif" }}
           className="lg:text-5xl text-3xl text-gray-100 text-center mb-10 px-2 md:px-0"
@@ -25,7 +25,7 @@ const CallToAction = () => {
       </Slide>
       <div className="grid lg:grid-cols-3 gap-3 items-center justify-center">
         <div className="order-2">
-          <Slide bottom>
+          <Slide direction="down">
             <div className="my-5">
               <h1
                 style={{ fontFamily: "'Jelytta', sans-serif" }}
@@ -83,7 +83,7 @@ const CallToAction = () => {
         </div>
 
         <div className='flex flex-col order-first gap-4'>
-          <Slide bottom>
+          <Slide direction="down">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/7/76/Stamp-kenya1963-coffee-industry.jpeg"
               alt=""
@@ -91,7 +91,7 @@ const CallToAction = () => {
             />
           </Slide>
 
-          <Slide bottom>
+          <Slide direction="down">
 
             <img
               src={africa}
@@ -102,7 +102,7 @@ const CallToAction = () => {
         </div>
 
         <div className="flex flex-col order-last gap-4">
-          <Slide bottom>
+          <Slide direction="down">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/9/91/SEN_1914_MiNr054_mt_B002.jpg"
               alt=""
@@ -111,7 +111,7 @@ const CallToAction = () => {
           </Slide>
 
 
-          <Slide bottom>
+          <Slide direction="down">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/a/ab/1953_Nigeria_10_Shilling_stamp.jpg"
               alt=""

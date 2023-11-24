@@ -3,7 +3,7 @@ import Pattern from '../assets/Pattern.png';
 import usePageTitle from '../Hooks/usePageTitle';
 import { useFormik } from 'formik';
 import { contactSchema } from '../Hooks/validateInputs';
-import { Fade } from 'react-reveal';
+import { Fade } from 'react-awesome-reveal';
 import { sendMail } from '../Hooks/sendMail';
 
 const EvenCoOrdinatorPage = () => {
@@ -53,7 +53,7 @@ const EvenCoOrdinatorPage = () => {
         </h1>
         <div>
           <Fade
-            bottom
+            direction="down"
             big
             duration={1500}
           >

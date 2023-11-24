@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { Slide } from 'react-reveal';
+import { Slide } from 'react-awesome-reveal';
 import logo from '../../assets/ASF_logo_color.png';
 import greenBg from '../../assets/green.png';
 

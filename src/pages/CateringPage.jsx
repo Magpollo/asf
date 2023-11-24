@@ -3,7 +3,7 @@ import CateringSwiperCarousel from '../components/CateringComponents/CateringCar
 import Pattern from '../assets/Pattern.png';
 import CateringMenu from '../components/CateringComponents/CateringMenu';
 import usePageTitle from '../Hooks/usePageTitle';
-import { Fade } from 'react-reveal';
+import { Fade } from 'react-awesome-reveal';
 
 const CateringPage = () => {
   usePageTitle('Catering | African Soul Food');
@@ -20,7 +20,7 @@ const CateringPage = () => {
       >
         <div className="container mx-auto py-16 pt-28">
           <Fade
-            bottom
+            direction="down"
             duration={1500}
           >
             <CateringSwiperCarousel />

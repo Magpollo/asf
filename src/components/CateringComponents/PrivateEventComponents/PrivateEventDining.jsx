@@ -1,5 +1,5 @@
 import React from 'react';
-import { Zoom, Slide } from 'react-reveal';
+import { Zoom, Slide } from 'react-awesome-reveal';
 import ButtonOne from '../../ShareComponents/ButtonOne';
 import { Link } from 'react-router-dom';
 
@@ -8,7 +8,7 @@ const PrivateEventDining = () => {
     <>
       <section className="pb-20 pt-12">
         <Slide
-          bottom
+          direction="down"
           duration={1500}
         >
           <h1
@@ -20,7 +20,7 @@ const PrivateEventDining = () => {
         </Slide>
         <div className="grid grid-cols-2 lg:gap-3 gap-0 items-center h-fit">
           <Zoom
-            bottom
+            direction="down"
             big
             cascade
             duration={1500}
@@ -38,7 +38,7 @@ const PrivateEventDining = () => {
           </Zoom>
         </div>
         <Slide
-          bottom
+          direction="down"
           big
         >
           <h2
@@ -64,7 +64,7 @@ const PrivateEventDining = () => {
         </Slide>
         <div className="grid grid-cols-2 gap-0 items-center h-fit">
           <Zoom
-            bottom
+            direction="down"
             big
             cascade
             duration={1500}

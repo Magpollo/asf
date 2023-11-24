@@ -1,6 +1,6 @@
 import React from 'react';
 import Map from './Map';
-import { Slide } from 'react-reveal';
+import { Slide } from 'react-awesome-reveal';
 import bgPattern from '../../assets/green.png';
 import { Link } from 'react-router-dom';
 
@@ -15,10 +15,10 @@ const FooterSection = () => {
     >
       <hr className="border-t-2 w-10/12 mx-auto py-5" />
       <div className="container mx-auto">
-        <Slide bottom>
+        <Slide direction="down">
           <Map />
         </Slide>
-        <Slide bottom>
+        <Slide direction="down">
           <footer className="footer bg-transparent p-10 text-gray-100 container mx-auto">
             <div>
               <span className="footer-title text-gray-100 text-2xl opacity-100">

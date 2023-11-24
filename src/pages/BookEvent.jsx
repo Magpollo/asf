@@ -1,7 +1,7 @@
 import React from 'react';
 import Pattern from '../assets/Pattern.png';
 import usePageTitle from '../Hooks/usePageTitle';
-import { Fade } from 'react-reveal';
+import { Fade } from 'react-awesome-reveal';
 import { useFormik } from 'formik';
 import { bookingSchema } from '../Hooks/validateInputs';
 import { sendMail } from '../Hooks/sendMail';
@@ -55,7 +55,7 @@ const EventPage = () => {
         </h1>
         <div>
           <Fade
-            bottom
+            direction="down"
             big
             duration={1500}
           >

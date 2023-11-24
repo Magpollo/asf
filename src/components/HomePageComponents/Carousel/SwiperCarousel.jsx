@@ -1,6 +1,6 @@
 import React from 'react';
 // Import Swiper React components
-import { Slide } from 'react-reveal';
+import { Slide } from 'react-awesome-reveal';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination } from 'swiper';
 import ButtonOne from '../../ShareComponents/ButtonOne';
@@ -14,7 +14,7 @@ import 'swiper/css/pagination';
 const SwiperCarousel = () => {
   return (
     <section className="container mx-auto pt-40 grid">
-      <Slide bottom>
+      <Slide>
         <h1
           style={{ fontFamily: "'Zilla Slab', sans-serif" }}
           className="lg:text-6xl text-6xl font-bold text-center text-white max-w-3xl mx-auto"
