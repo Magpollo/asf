@@ -68,7 +68,7 @@ const CallToAction = () => {
                   href="tel:+17707590707"
                   className="hover:text-[#F7CC32] transition-all duration-200 ease-in-out delay-75"
                 >
-                  (770) 759-0707
+                  (770) 795-0707
                 </a>{' '}
                 <br />
                 <a
