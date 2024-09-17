@@ -34,6 +34,7 @@ const CallToAction = () => {
                 Opening Hours:
               </h1>
               <p className="text-xl text-center text-gray-100 my-8">
+                Monday: Closed
                 <br />
                 Sun - Thur: 12pm - 9pm
                 <br />
